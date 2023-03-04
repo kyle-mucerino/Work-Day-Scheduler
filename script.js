@@ -6,8 +6,8 @@ $(document).ready(function () {
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener)
   $('.saveBtn').click(function() { 
-      var inputValue = $(this).siblings('descxription').val();
-      var inputID = $(this).siblings('decription').attr('id'); 
+      var inputValue = $(this).siblings('description').val();
+      var inputID = $(this).parent().attr('id'); 
       localStorage.setItem(inputID, inputValue);
   });
   // function? How can DOM traversal be used to get the "hour-x" id of the
