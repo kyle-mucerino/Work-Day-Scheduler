@@ -6,7 +6,7 @@ $(document).ready(function () {
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener)
   $('.saveBtn').click(function() { 
-      var inputValue = $(this).siblings('description').val();
+      var inputValue = $(this).siblings('.description').val();
       var inputID = $(this).parent().attr('id'); 
       localStorage.setItem(inputID, inputValue);
   });
@@ -25,4 +25,6 @@ $(document).ready(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+  $('#currentDay').text(dayjs().format('dddd, MMMM D, YYYY'));
 });
+
